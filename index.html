@@ -30,63 +30,119 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unit-4 Game</title>
 
-<!-- bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" class="rel">
 
 </head>
 
 <body>
 
-<!-- jumbotron with title -->
-  <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4" style="text-align: center">Magic Crystals!!!!</h1>
-    </div>
-<!-- jumbotron with instructions -->
-    <div class="jumbotron">
-        <h5>How to play:</h5>
+    <!-- jumbotron with title -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Magic Crystals!!!!</h1>
+        </div>
+        <!-- jumbotron with instructions -->
+        <div class="jumbotron">
+            <h5>How to play:</h5>
 
-        <hr class="my-4">
+            <hr class="my-4">
 
-        <p>You will be given a random number at the start of the game.</p>
+            <p class="instructions">You will be given a random number at the start of the game.</p>
 
-        <p>There are four crystals below. By clicking on a crystal - you will add a specific amount of points to your total score.</p>
-        
-        <p>You win the game by matching your total score to the random number.</p>
+            <p class="instructions">There are four crystals below. By clicking on a crystal - you will add a specific
+                amount of points to your total score.</p>
 
-        <p>You lose if your total score goes above the random number.</p>
+            <p class="instructions">You win the game by matching your total score to the random number.</p>
 
-        <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p class="instructions">You lose if your total score goes above the random number.</p>
 
-        <p>The value of each crystal will reset each time the game restarts.</p>
-    </div> <!-- end of jumbotron -->
+            <p class="instructions">The value of each crystal is hidden from you until you click on it.</p>
+
+            <p class="instructions">The value of each crystal will reset each time the game restarts.</p>
+        </div> <!-- end of jumbotron -->
 
 
-<!-- row with random #, "your score", and "crystal collection" -->
-      <div class="row">
-<!-- container for random number -->
-          <div class="col-md-3">
-            <div class="card">
-                <div class="card-header">
-                    Target Score:
-                </div>
-                <div class="card-body">
-                    #
+        <!-- row with random #, "your score", and "crystal collection" -->
+        <div class="row">
+            <!-- container for random number -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        Target Score:
+                    </div>
+                    <div class="card-body" id="targetScore">
+
+                    </div>
                 </div>
             </div>
-          </div>
-
-<!-- Container for "your total score is:"  -->
+            <!-- Container for "your total score is:"  -->
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-header">
                         Your Score:
+                    </div>
+                    <div class="card-body" id="yourScore">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Crystal collection container -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Crystal Collection:</div>
+                    <div class="card-body">
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="assets/images/redGem.png" class="card-img-top" alt="redGem" id="red"
+                                    width="135" height="135">
+                            </div>
+
+                            <div class="card">
+                                <img src="assets/images/greenGem.png" class="card-img-top" alt="greenGem" id="green"
+                                    width="135" height="135">
+                            </div>
+
+                            <div class="card">
+                                <img src="assets/images/blueGem.png" class="card-img-top" alt="blueGem" id="blue"
+                                    width="135" height="135">
+                            </div>
+
+                            <div class="card">
+                                <img src="assets/images/purpleGem.png" class="card-img-top" alt="purpleGem" id="purple"
+                                    width="135" height="135">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="height: 20px"></div>
+
+        <!-- Row for wins/losses -->
+        <div class="row">
+
+            <!-- Container for wins -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Wins:
                     </div>
                     <div class="card-body">
                         #
@@ -94,73 +150,29 @@
                 </div>
             </div>
 
-<!-- Crystal collection container -->
+            <!-- Container for losses -->
+
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">Crystal Collection:</div>
-                        <div class="card-body">
-                            <div class="card-group">
-                                <div class="card">
-                                    <img src="assets/images/redGem.png" class="card-img-top" alt="redGem" width="135" height="135">
-                                </div>
-
-                                <div class="card">
-                                        <img src="assets/images/greenGem.png" class="card-img-top" alt="greenGem" width="135" height="135"> 
-                                </div>
-
-                                <div class="card">
-                                        <img src="assets/images/blueGem.png" class="card-img-top" alt="blueGem" width="135" height="135">
-                                </div>
-
-                                <div class="card">
-                                        <img src="assets/images/purpleGem.png" class="card-img-top" alt="purpleGem" width="135" height="135">
-                                </div>     
-                            </div>
-                        </div>
+                    <div class="card-header">
+                        Losses:
+                    </div>
+                    <div class="card-body">
+                        #
                     </div>
                 </div>
-    </div>
-      
-
-<div class="row" style="height: 20px"></div>
-
-<!-- Row for wins/losses -->
-    <div class="row">
-
-<!-- Container for wins -->
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                        Wins:
-                </div>
-                <div class="card-body">
-                #
-                </div>
             </div>
         </div>
 
-<!-- Container for losses -->
 
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                        Losses:
-                </div>
-                <div class="card-body">
-                #
-                </div>
-            </div>
-        </div>
-    </div>
 
-    
+    </div> <!-- main container div closer-->
 
-  </div>  <!-- main container div closer-->
 
-<!-- bootstrap JS--  --> 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- JS link -->
+    <script src="assets/javascript/game.js"></script>
 
 </body>
+
 </html>
