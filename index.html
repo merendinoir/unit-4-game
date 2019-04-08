@@ -43,12 +43,12 @@
 
 <body>
 
-<!-- jumbotron with title and instructions -->
+<!-- jumbotron with title -->
   <div class="container">
     <div class="jumbotron">
         <h1 class="display-4" style="text-align: center">Magic Crystals!!!!</h1>
     </div>
-
+<!-- jumbotron with instructions -->
     <div class="jumbotron">
         <h5>How to play:</h5>
 
@@ -65,12 +65,12 @@
         <p>The value of each crystal is hidden from you until you click on it.</p>
 
         <p>The value of each crystal will reset each time the game restarts.</p>
-
     </div> <!-- end of jumbotron -->
 
 
-<!-- container for random number -->
+<!-- row with random #, "your score", and "crystal collection" -->
       <div class="row">
+<!-- container for random number -->
           <div class="col-md-3">
             <div class="card">
                 <div class="card-header">
@@ -94,24 +94,40 @@
                 </div>
             </div>
 
-<!-- Container with 4 crystals that user can click -->
+<!-- Crystal collection container -->
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">
-                        Crystal Collection
-                    </div>
-                    <div class="card-body">
-                    ...
+                    <div class="card-header">Crystal Collection:</div>
+                        <div class="card-body">
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="assets/images/redGem.png" class="card-img-top" alt="redGem" width="135" height="135">
+                                </div>
+
+                                <div class="card">
+                                        <img src="assets/images/greenGem.png" class="card-img-top" alt="greenGem" width="135" height="135"> 
+                                </div>
+
+                                <div class="card">
+                                        <img src="assets/images/blueGem.png" class="card-img-top" alt="blueGem" width="135" height="135">
+                                </div>
+
+                                <div class="card">
+                                        <img src="assets/images/purpleGem.png" class="card-img-top" alt="purpleGem" width="135" height="135">
+                                </div>     
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-      </div>
+    </div>
+      
 
 <div class="row" style="height: 20px"></div>
 
-<!-- Container for wins and losses (inline with the random # container in example) -->
-       
+<!-- Row for wins/losses -->
     <div class="row">
+
+<!-- Container for wins -->
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
@@ -123,30 +139,21 @@
             </div>
         </div>
 
+<!-- Container for losses -->
+
         <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                            Losses:
-                    </div>
-                    <div class="card-body">
-                    #
-                    </div>
+            <div class="card">
+                <div class="card-header">
+                        Losses:
+                </div>
+                <div class="card-body">
+                #
                 </div>
             </div>
+        </div>
     </div>
 
-
-
-
     
-
-
-  
-
-
-   
-
-
 
   </div>  <!-- main container div closer-->
 
