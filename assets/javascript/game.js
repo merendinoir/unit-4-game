@@ -53,7 +53,7 @@ var startGame = function () {
     //change the html to reflect all of these changes
     $("#yourScore").html(currentScore);
     $("#targetScore").html(targetScore);
-    
+
 
     //Testing
     console.log("-----------------------------");
@@ -65,10 +65,49 @@ var startGame = function () {
 // click fxns for crystal value
 var addValue = function (crystal) {
 
+    //Chnage current score
     currentScore = currentScore + crystal.value;
+
+    //change html
+    $("#yourScore").html(currentScore);
+
+    //Call the changeWin fxn
+    checkWin();
 
     //testing
     console.log("Your Score: " + currentScore);
+}
+
+//Check if user won or lost - reset game
+var checkWin = function() {
+
+    if (currentScore > targetScore) {
+        alert("Sorry, you lost!");
+        console.log("go cry in a corner");
+
+        //Add to loss count
+        lossCount++;
+
+        //change loss html
+        $("#lossCount").html(lossCount);
+        
+        //Restart the game
+        startGame();
+    }
+
+    else if (currentScore == targetScore) {
+        alert("Congratulations!! You won!");
+        console.log("Winner winner chicken dinner");
+        
+        //Add to win count
+        winCount++;
+
+        $("#winCount").html(winCount);
+
+        //Restart the game
+        startGame();
+    }
+
 }
 
 
@@ -76,18 +115,18 @@ var addValue = function (crystal) {
 //=====================================================================
 startGame();
 
-$("#red").click(function () {
+$("#red").on("click", function() {
     addValue(crystal.red);
 });
 
-$("#green").click(function () {
+$("#green").on("click", function() {
     addValue(crystal.green);
 });
 
-$("#blue").click(function () {
+$("#blue").on("click", function() {
     addValue(crystal.blue);
 });
 
-$("#purple").click(function () {
+$("#purple").on("click", function() {
     addValue(crystal.purple);
 });
