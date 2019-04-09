@@ -47,33 +47,36 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/style.css" class="rel">
 
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
 </head>
 
 <body>
 
     <!-- jumbotron with title -->
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Magic Crystals!!!!</h1>
-        </div>
+        <div class="row" style="height: 20px"></div>
+        <div class="jumbotron primary"><h1 class="display-4">Magic Crystals!!!!</h1></div>
         <!-- jumbotron with instructions -->
-        <div class="jumbotron">
-            <h5>How to play:</h5>
+        <div class="jumbotron primary">
+            <h3>How to play:</h3>
 
             <hr class="my-4">
 
-            <p class="instructions">You will be given a random number at the start of the game.</p>
+            <p class=" instructions content">You will be given a random number at the start of the game.</p>
 
-            <p class="instructions">There are four crystals below. By clicking on a crystal - you will add a specific
+            <p class=" instructions content">There are four crystals below. By clicking on a crystal - you will add a specific
                 amount of points to your total score.</p>
 
-            <p class="instructions">You win the game by matching your total score to the random number.</p>
+            <p class=" instructions content">You win the game by matching your total score to the random number.</p>
 
-            <p class="instructions">You lose if your total score goes above the random number.</p>
+            <p class=" instructions content">You lose if your total score goes above the random number.</p>
 
-            <p class="instructions">The value of each crystal is hidden from you until you click on it.</p>
+            <p class=" instructions content">The value of each crystal is hidden from you until you click on it.</p>
 
-            <p class="instructions">The value of each crystal will reset each time the game restarts.</p>
+            <p class=" instructions content">The value of each crystal will reset each time the game restarts.</p>
         </div> <!-- end of jumbotron -->
 
 
@@ -81,50 +84,42 @@
         <div class="row">
             <!-- container for random number -->
             <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        Target Score:
-                    </div>
-                    <div class="card-body" id="targetScore">
-
-                    </div>
+                <div class="card primary">
+                    <div class="card-header"><h4>Target Score:</h4> </div>
+                    <div class="card-body content" id="targetScore"><h4></h4></div>
                 </div>
             </div>
             <!-- Container for "your total score is:"  -->
             <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        Your Score:
-                    </div>
-                    <div class="card-body" id="yourScore">
-
-                    </div>
+                <div class="card primary">
+                    <div class="card-header"> <h4>Your Score:</h4> </div>
+                    <div class="card-body content" id="yourScore"><h4></h4></div>
                 </div>
             </div>
             <!-- Crystal collection container -->
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Crystal Collection:</div>
+                <div class="card primary">
+                    <div class="card-header"><h4>Crystal Collection:</h4></div>
                     <div class="card-body">
                         <div class="card-group">
                             <div class="card">
                                 <img src="assets/images/redGem.png" class="card-img-top" alt="redGem" id="red"
-                                    width="135" height="135">
+                                width="135" height="135">
                             </div>
 
                             <div class="card">
                                 <img src="assets/images/greenGem.png" class="card-img-top" alt="greenGem" id="green"
-                                    width="135" height="135">
+                                width="135" height="135">
                             </div>
 
                             <div class="card">
                                 <img src="assets/images/blueGem.png" class="card-img-top" alt="blueGem" id="blue"
-                                    width="135" height="135">
+                                width="135" height="135">
                             </div>
 
                             <div class="card">
                                 <img src="assets/images/purpleGem.png" class="card-img-top" alt="purpleGem" id="purple"
-                                    width="135" height="135">
+                                width="135" height="135">
                             </div>
                         </div>
                     </div>
@@ -140,24 +135,22 @@
 
             <!-- Container for wins -->
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Wins:
-                    </div>
-                    <div class="card-body" id="winCount">0</div>
+                <div class="card primary">
+                    <div class="card-header"><h4>Wins:</h4></div>
+                    <div class="card-body content" id="winCount"><h4>0</h4></div>
                 </div>
             </div>
 
             <!-- Container for losses -->
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        Losses:
-                    </div>
-                    <div class="card-body" id="lossCount">0</div>
+                <div class="card primary">
+                    <div class="card-header"><h4>Losses:</h4></div>
+                    <div class="card-body content" id="lossCount"><h4>0</h4></div>
                 </div>
             </div>
         </div>
+
+        <div class="row" style="height: 20px"></div>
 
 
     </div> <!-- main container div closer-->

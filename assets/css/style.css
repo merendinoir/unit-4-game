@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/44/85/855854edbc51009.jpg
+    );
+    font-family: 'Dokdo', cursive;
 }
 
 .instructions {
@@ -9,3 +12,19 @@ body {
 .card-header {
     font-weight: bold;
 }
+
+.primary {
+    background-color:#1C1D19;
+    color: white;
+    border: 0px;
+}
+
+.content {
+    font-family: 'Anton', sans-serif;
+}
+
+#red {
+    border-color: #1C1D19;
+}
+
+
