@@ -39,7 +39,7 @@ var getRandom = function (min, max) {
 var startGame = function () {
 
     //Reset the current score
-    var currentScore = 0;
+    currentScore = 0;
 
     //Set a new target score
     targetScore = getRandom(19, 120);
